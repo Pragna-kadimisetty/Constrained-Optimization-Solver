@@ -1,26 +1,44 @@
-# Constrained Optimization Solver (Lagrange + KKT)
+# AI-Based Constrained Optimization Solver (Lagrange + KKT + GNN)
 
 ## Overview
 
-The **Constrained Optimization Solver** is a Python-based project that solves optimization problems where an objective function must satisfy certain constraints.
+The **AI-Based Constrained Optimization Solver** is an advanced Python project that solves optimization problems where an objective function must satisfy given constraints.
+
+This project combines **classical mathematical optimization techniques** with **modern Artificial Intelligence (AI)** approaches.
 
 The solver uses:
 
 * **Lagrange Multipliers** for equality constraints
 * **Karush–Kuhn–Tucker (KKT) Conditions** for inequality constraints
+* **Neural Networks (GNN-inspired model)** for learning and predicting optimal solutions
 
-This project demonstrates the practical use of constrained optimization techniques used in **machine learning, engineering, and economics**.
+---
+
+## 🚀 What's New (Project Upgrade)
+
+This version extends the traditional solver by integrating **AI-based learning**:
+
+* Automatically generates optimization problems
+* Learns solution patterns using a neural network
+* Predicts optimal values without solving equations manually
+* Bridges the gap between **mathematics and machine learning**
 
 ---
 
 ## Features
 
-* Solves equality constrained optimization problems
-* Supports inequality constraints
+### 🔹 Classical Optimization
+* Solves equality constrained problems (Lagrange)
+* Supports inequality constraints (KKT)
 * Automatic Lagrangian construction
 * Symbolic differentiation using **SymPy**
 * Numerical optimization using **SciPy**
-* Simple and modular architecture
+
+### 🔹 AI-Based Optimization
+* Generates training data using existing solver
+* Trains a neural network model
+* Predicts optimal solutions instantly
+* Reduces computation time for repeated problems
 
 ---
 
@@ -32,91 +50,78 @@ L(x, λ) = f(x) + λ g(x)
 
 Where:
 
-* **f(x)** = objective function
-* **g(x)** = constraint
-* **λ** = Lagrange multiplier
+* **f(x)** = objective function  
+* **g(x)** = constraint  
+* **λ** = Lagrange multiplier  
+
+---
 
 ### KKT Complementary Slackness
 
-λᵢ gᵢ(x) = 0
+λᵢ gᵢ(x) = 0  
 
-This ensures constraints are satisfied at the optimal point.
+Ensures optimality under inequality constraints.
+
+---
+
+## 🧠 AI Model (GNN-Inspired)
+
+The AI module treats optimization problems as structured data and learns patterns:
+
+* Input → Constraint values  
+* Output → Optimal variables (x, y)
+
+Model:
+
+* Feedforward Neural Network (GNN-inspired structure)
+* Loss Function: Mean Squared Error (MSE)
+* Optimizer: Adam
 
 ---
 
 ## Project Structure
-
-```
 constrained-optimization-solver
 │
 ├── solver.py
 ├── requirements.txt
 └── README.md
-```
 
 ---
 
-## Installation
-
-Clone the repository:
-
-```
-git clone https://github.com/Pragna-kadimisetty/Constrained-Optimization-Solver.git
-```
-
-Move into the project directory:
-
-```
-cd Constrained-Optimization-Solver
-```
-
-Install dependencies:
-
-```
-pip install -r requirements.txt
-```
-
----
-
-## Usage
-
-Run the solver:
-
-```
-python solver.py
-```
-
-Example problem:
-
-Minimize:
-
-f(x, y) = x² + y²
-
-Subject to:
-
-x + y = 1
-
-Output:
-
-Optimal Solution:
-x = 0.5
-y = 0.5
-Minimum Value = 0.5
-
+## 🔄 Workflow
+User Input
+↓
+Lagrange/KKT Solver (Exact Solution)
+↓
+Dataset Generation
+↓
+Neural Network Training
+↓
+AI Prediction (Fast Approximation)
 ---
 
 ## Applications
 
-* Machine Learning (Support Vector Machines)
+* Machine Learning (Model Optimization)
 * Engineering Design Optimization
 * Economic Resource Allocation
 * Operations Research
+* AI-driven decision systems
 
 ---
 
 ## Future Improvements
 
-* 3D optimization visualization
-* Streamlit web interface
-* Multiple constraint support
-* Graph visualization of constraint regions
+* Full Graph Neural Network (PyTorch Geometric)
+* Natural Language Input using Generative AI
+* Streamlit Web Interface
+* 3D Visualization of optimization surfaces
+* Multi-variable and multi-constraint support
+
+---
+
+## Conclusion
+
+This project demonstrates how **classical optimization techniques** can be enhanced using **Artificial Intelligence**. By integrating neural networks, the solver not only computes exact solutions but also learns to predict them efficiently.
+
+---
